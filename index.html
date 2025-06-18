@@ -2,6 +2,28 @@
   <head><title>test site please ignore</title></head>
 
   <body>
+    cheapo<br><br>
+    <div id="paypal-button-container-P-2K31440990826700JNBJRYPQ"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=Ab4SysKjX5pMx6AzzI9FaUmT-fs__cmu2fVRi-5VBNU8RP0KSBTSxxiQObY9xwOU7BZEig6U3F9KeRoR&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'white',
+          layout: 'horizontal',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-2K31440990826700JNBJRYPQ'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-2K31440990826700JNBJRYPQ'); // Renders the PayPal button
+</script>
     yay lfg<br><br>
     <div id="paypal-button-container-P-60Y7172834501424JNBJRVJA"></div>
 <script src="https://www.paypal.com/sdk/js?client-id=Ab4SysKjX5pMx6AzzI9FaUmT-fs__cmu2fVRi-5VBNU8RP0KSBTSxxiQObY9xwOU7BZEig6U3F9KeRoR&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
